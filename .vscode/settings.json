@@ -1,0 +1,72 @@
+{
+    "better-comments.highlightPlainText": true,
+    "better-comments.tags": [
+
+
+
+
+
+
+        {
+            "tag": "ʚ♥ɞ",
+            "color": "#FFE375FF",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "#1FC26BFF",
+            "borderRadius": "7px",
+            "border": "3px #3DC2D4FF solid",
+            "fontSize":"40px",
+            "bold": true,
+            "fontFamily": "SF Pro Rounded Regular"
+        },
+        {
+            "tag": "ฅʕ>ᴥ<ʔฅ",
+            "color": "white",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "black",
+            "borderRadius": "7px",
+            "fontSize":"40px",
+            "bold": false,
+            "fontFamily": "SF Pro Rounded Regular"
+        },
+        {
+            "tag": "//",
+            "color": "#474747",
+            "strikethrough": true,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "todo",
+            "color": "#FF8C00",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "*",
+            "color": "#98C379",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        }
+    ],
+    "notebook.compactView": true,
+    "doki.wallpaper.enabled": true,
+    "doki.background.enabled": true,
+    "doki.background.path": "",
+    "doki.background.anchor": "center",
+    "doki.wallpaper.path": "",
+    "doki.sticker.css": "background-position:0% 40%;  opacity:0",
+    "doki.sticker.path": "",
+    "doki.statusbar.name": "Kitty ",
+    "zenMode.centerLayout": false,
+    "workbench.editor.centeredLayoutAutoResize": false
+}
