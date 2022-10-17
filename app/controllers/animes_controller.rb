@@ -6,7 +6,15 @@ class AnimesController < ApplicationController
 
   # GET /animes or /animes.json
   def index
-    @animes = Anime.all
+    @animes = Anime.order(:anime_title).page params[:page]
+    # @animes = Anime.order(:mal_id).page params[:page]
+    # @animes = Anime.order(:anime_image).page params[:page]
+    # @animes = Anime.order(:episode_count).page params[:page]
+    # @animes = Anime.order(:status).page params[:page]
+    # @animes = Anime.order(:score).page params[:page]
+    # @animes = Anime.order(:synopsis).page params[:page]
+    # @animes = Anime.order(:genre).page params[:page]
+
   end
 
   # GET /animes/1 or /animes/1.json
