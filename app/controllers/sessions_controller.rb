@@ -1,21 +1,19 @@
 class SessionsController < ApplicationController
     
-    def new
-        @user = User.new
-    end
-    
     def create
-        @user = User.create(user_params)
-        if @user.valid?
-            @user.save
+        user = User.find_by(username: params[:username])
+        if user&.authenticate(params[:password])
+          session[:user_id] = user.id
+          puts session[:user_id]
+          puts session
+          render json: user, status: :created
+        else
+          render json: { error: "Invalid username or password" }, status: :unauthorized
         end
-    end
+      end
     
-    def show
-        @user = User.find(params[:id])
-    end
-    
-    def destroy
-        session[:user_id] = nil 
-    end 
+      def destroy
+        session.delete :user_id
+        head :no_content
+      end
 end

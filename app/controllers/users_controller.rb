@@ -1,39 +1,54 @@
 class UsersController < ApplicationController
-  before_action :authorized, only: [:show]
-
-  rescue_from ActiveRecord::RecordNotFound, with:, :render_not_found_response 
-  rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity_response 
-
-  def new 
-    @user = User.new 
-  end 
-
-  def create 
-    @user = User.create(user_params)
-    if @user.valid?
-       @user.save 
-    end 
-  end 
-
-  def show 
-    @user = User.find(params[:id])
-    @followers = Followers.all 
-  end 
-
-  private
-
-  def user_params 
-    params.require(:user).permit(:user, :password, :password_confirmation)
-  end 
+  before_action :authorize, only: [:show, :update, :destroy]
+    before_action :set_user, only: %i[ show update destroy ]
+    rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity_response 
+    rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response 
     
-  def render_unprocessable_entity_response(exception)
-      render json: { errors: exception.record.errors.full_messages }, status: :unprocessable_entity
-  end 
-  
-  def render_not_found_response 
-      render json: { error: "User not found"}, status: :not_found 
-  end 
-  
+    def create
+        user = User.create(user_params)
+        if user.valid?
+             render json: user, status: :created
+        else 
+            render json: {errors: user.errors.full_messages }, status: :unprocessable_entity
+    end
+        
+    def show
+        user = set_user
+        render json: user
+    end
+
+    def user_comments 
+        user = find_user 
+        render json: user.comments
+    end 
+        
+        
+        private 
+        def set_user
+            User.find_by(id: session[:user_id])
+        end
+        
+        def find_user
+            User.find(params[:id]) 
+        end 
+        
+        def authorize
+            #If a session cookie does not include a user_id, return an error
+            return render json: { error: "Not authorized" }, status: :unauthorized unless session.include? :user_id
+        end
+        
+        def user_params
+            # PW and PW Confirmation automatically converted to password_digest on backend through bcrypt/has_secure_password
+            params.permit( :username, :email, :password, :password_confirmation)
+        end
+        
+        def render_unprocessable_entity_response(exception)
+            render json: { errors: exception.record.errors.full_messages }, status: :unprocessable_entity
+        end 
+        
+        def render_not_found_response 
+            render json: { error: "User not found"}, status: :not_found 
+        end    
 
 
 end

@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+    include ActionController::Cookies 
     helper_method :logged_in?, :current_user 
 
     def current_user 
@@ -14,5 +15,6 @@ class ApplicationController < ActionController::Base
     def authorized
         redirect_to login_path unless logged_in?
     end
+
 
 end

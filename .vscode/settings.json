@@ -64,8 +64,8 @@
     "doki.background.path": "",
     "doki.background.anchor": "center",
     "doki.wallpaper.path": "",
-    "doki.sticker.css": "z-index:100;background-position:100% 100%; opacity:0.3;",
-    "doki.sticker.path": "/Users/user/Desktop/the lobby/desktop workspace mode/desktop wallpapers/d4f4e35e60191c4fb980e84ff66e8887-removebg-preview.png",
+    "doki.sticker.css": "z-index:100;background-position:101% 100%; opacity:.0;",
+    "doki.sticker.path": "/Users/user/Desktop/the lobby/desktop workspace mode/desktop wallpapers/rack/dww.png",
     "doki.statusbar.name": "Kitty ",
     "zenMode.centerLayout": false,
     "workbench.editor.centeredLayoutAutoResize": false
