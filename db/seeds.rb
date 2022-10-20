@@ -30,7 +30,7 @@ def get_animes(animeId)
           data["episodes"].each do |episode|
            
                 Episode.create!(
-                              mal_id:                     mal_id,
+                              mal_id:                     episode["mal_id"].to_i,
                               ep_num:                     episode["epNum"],
                               link:                       episode["link"]
                           )           end 

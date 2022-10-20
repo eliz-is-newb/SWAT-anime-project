@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   get 'sessions/new'
   resources :followers
-  resources :comments
+  resources :comments, only: [index, :create, :destroy]
   resources :episodes
   resources :animes
   resources :favorites
@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   # ฅʕ>ᴥ<ʔฅ  user's routes - handling authentication
   resources :users, only: [:create, :show]
   resources :sessions, only: [:create, :destroy]
+  
 
   
   post "/login", to: "sessions#create"
