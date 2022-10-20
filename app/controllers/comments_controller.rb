@@ -11,7 +11,7 @@ class CommentsController < ApplicationController
   end
   
   def create 
-      comment = Comment.create(user_id: session[:user_id])
+      comment = @current_user.comments.create!(comment_params)
       render json: comment, serializer: CommentSerializer, status: :created 
   end 
   
@@ -33,7 +33,7 @@ class CommentsController < ApplicationController
     return render json: { error: "Not authorized" }, status: :unauthorized unless session.include? :user_id 
 
   def comment_params 
-      params.permit(:body, :post_id, :user_id) 
+      params.permit(:text, :post_id, :user_id) 
   end 
   
   def render_not_found_response

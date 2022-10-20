@@ -5,7 +5,7 @@ class UsersController < ApplicationController
     rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response 
     
     def create
-        user = User.create(user_params)
+        user = User.create!(user_params)
         if user.valid?
              render json: user, status: :created
         else 
@@ -13,8 +13,8 @@ class UsersController < ApplicationController
     end
         
     def show
-        user = set_user
-        render json: user
+        
+        render json: @current_user
     end
 
     def user_comments 
@@ -39,7 +39,7 @@ class UsersController < ApplicationController
         
         def user_params
             # PW and PW Confirmation automatically converted to password_digest on backend through bcrypt/has_secure_password
-            params.permit( :username, :email, :password, :password_confirmation)
+            params.permit( :username, :email, :password, :password_confirmation, :image_url, :bio)
         end
         
         def render_unprocessable_entity_response(exception)
