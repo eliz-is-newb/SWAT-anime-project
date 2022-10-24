@@ -10,18 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_10_19_231001) do
+ActiveRecord::Schema.define(version: 2022_10_24_033318) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "animes", force: :cascade do |t|
     t.string "api_id"
     t.string "anime_title"
-    t.integer "mal_id"
+    t.string "mal_id"
     t.string "anime_image"
     t.integer "episode_count"
     t.string "status"
     t.float "score"
     t.string "synopsis"
-    t.string "genre"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -40,7 +42,7 @@ ActiveRecord::Schema.define(version: 2022_10_19_231001) do
     t.string "link"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "mal_id"
+    t.string "mal_id"
   end
 
   create_table "favorites", force: :cascade do |t|
@@ -57,6 +59,23 @@ ActiveRecord::Schema.define(version: 2022_10_19_231001) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "genres", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "anime_id"
+    t.text "mal_id"
+    t.string "genres", default: [], array: true
+  end
+
+  create_table "lr_animes", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.text "mal_id"
+    t.text "anime_image"
+    t.text "episodes"
+    t.text "lr_anime_title"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "username"
@@ -66,6 +85,15 @@ ActiveRecord::Schema.define(version: 2022_10_19_231001) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "bio"
     t.string "image_url"
+  end
+
+  create_table "weekly_top_animes", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.text "mal_id"
+    t.text "animeImg"
+    t.text "score"
+    t.text "animeTitle"
   end
 
 end

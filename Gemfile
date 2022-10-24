@@ -5,15 +5,25 @@ ruby '3.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
-#ʚ♥ɞ new gemz for API routes 
+
+# Use Postgres as the database for Active Record
+gem 'pg'
+
 
 gem 'rest-client', '~> 2.1.0'
 gem 'json', '~> 2.6', '>= 2.6.2'
 gem 'kaminari'
 gem 'activerecord-import'
 gem 'active_model_serializers'
+
+
+gem 'opal-rails', '~> 2.0', '>= 2.0.2'
+
+
+
+
+
+
 
 
 

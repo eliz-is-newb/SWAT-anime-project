@@ -1,0 +1,2 @@
+module LrAnimesHelper
+end

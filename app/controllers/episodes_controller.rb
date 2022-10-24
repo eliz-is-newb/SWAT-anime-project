@@ -19,13 +19,13 @@ class EpisodesController < ApplicationController
 
   private
     def set_episode
-      @episode = Episode.find(params[:id])
+      @episode = Episode.find(params[:mal_id])
     end
 
 
     # Only allow a list of trusted parameters through.
     def episode_params
-      params.require(:episode).permit(:anime_id, :ep_num, :link)
+      params.require(:episode).permit(:mal_id, :ep_num, :link)
     end
     
     def render_not_found_response 

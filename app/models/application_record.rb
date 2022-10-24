@@ -4,4 +4,5 @@ class ApplicationRecord < ActiveRecord::Base
   require 'rest-client'
   require 'json' 
 
+
 end               

@@ -1,5 +1,7 @@
-class FavoritesController < ApplicationController
+  class FavoritesController < ApplicationController
   before_action :set_favorite, only: %i[ show edit update destroy ]
+  before_action :authorize
+
 
   # GET /favorites or /favorites.json
   def index

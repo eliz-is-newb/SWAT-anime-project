@@ -2,12 +2,15 @@ Rails.application.routes.draw do
 
   get 'sessions/new'
   resources :followers
-  resources :comments, only: [index, :create, :destroy]
+  resources :comments, only: [:index, :create, :destroy]
   resources :episodes
   resources :animes
   resources :favorites
+  resources :genres
+  resources :lr_animes
+  resources :weekly_top_animes
 
-  # ฅʕ>ᴥ<ʔฅ  user's routes - handling authentication
+  # ʚ♥ɞ user's routes - handling authentication
   resources :users, only: [:create, :show]
   resources :sessions, only: [:create, :destroy]
   
@@ -19,9 +22,21 @@ Rails.application.routes.draw do
   post "/signup", to: "users#create"
   get "/me", to: "users#show"
 
-  # ฅʕ>ᴥ<ʔฅ  anime 
+
+  # ʚ♥ɞ anime 
   get '/anime_info', to: "animes#index"
-    # this route is for anime data 
+    # this route is for all anime data 
+
+  get '/find/:anime_title', to: "animes#show"
+  get '/genre_search/:genres', to: "genres#search_by_genre"
+
+
+  # get '/show/lr_animes', to: "lr_animes#index"
+  # get '/show/weekly_top', to: "weekly_top_animes#index"
+
+  # get '/show/lr_animes', to: "lr_animes#show"
+  # get '/show/weekly_top', to: "weekly_top_animes#show"
+
 
  
 
