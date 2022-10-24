@@ -21,13 +21,13 @@ return (
 
 <>
 
-<div style={{ marginTop:"400px", width: "400px", position:"absolute", left:"846px", top: "58px"}}>
+<div style={{ marginTop:"400px", width: "405px", position:"absolute", left:"840px", top: "58px"}}>
 <div class="navbar-item has-dropdown is-trigger is-hoverable" id="login" onClick={handleDropDown2}
     style={{paddingTop: "20px", paddingRight:"40px", backgroundColor: "transparent", }}
     >
 
 <a><img className="shadow"
-style={{ maxHeight:"35px", dropShadow: "(16px 16px 10px black)" }}
+style={{ maxHeight:"38px", dropShadow: "(16px 16px 10px black)" }}
 src="./lib.png" />
     </a>  
 
@@ -37,8 +37,8 @@ src="./lib.png" />
             
                 style={{
                 position:"absolute",
-                top:"-360px",
-                left:"-800px",
+                top:"-378px",
+                left:"-790px",
                 padding:"2rem",
                 paddingInline:"2rem",
                 marginTop:"20px", 
@@ -48,7 +48,7 @@ src="./lib.png" />
                 backgroundColor:"black", 
                 fontFamily:"bold-font", 
                 color:"white", 
-                border:"white solid 3px",
+                border:"black solid 3px",
                 
              
                 borderRadius:"9px 9px 7px 7px"}}>
@@ -77,7 +77,7 @@ src="./lib.png" />
                                      {/* ʚ♥ɞ Form Submit Button */}
                                     <div class="field">
                                     <p class="control">
-                                    <button style={{fontFamily:"bold-font", fontSize:"16px", marginTop:"7px", borderRadius:"7px", backgroundColor: "rgba(183, 3, 30, 1)"}} class="button is-medium is-dark">
+                                    <button style={{fontFamily:"bold-font", fontSize:"18px", marginTop:"7px", borderRadius:"7px", backgroundColor: "rgba(183, 3, 30, 1)"}} class="button is-medium is-dark">
                                     Login
                                     </button>
                                     </p>

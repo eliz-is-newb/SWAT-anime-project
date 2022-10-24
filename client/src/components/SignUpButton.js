@@ -28,7 +28,7 @@ return (
     >
 
 <a><img className="shadow"
-style={{ maxHeight:"49px"}}
+style={{ maxHeight:"52px"}}
 src="./sub.png" />
     </a>  
         
@@ -40,7 +40,7 @@ src="./sub.png" />
         
                 style={{
                 position:"absolute",
-                top:"-360px",
+                top:"-380px",
                 left:"-890px",
                 padding:"2rem",
                 paddingInline:"2rem",
@@ -52,7 +52,7 @@ src="./sub.png" />
                 fontFamily:"bold-font", 
                 color:"white", 
                 borderTop:"none",
-                border:"white solid 3px",
+                border:"black solid 3px",
                 borderRadius:"9px 9px 7px 7px"}}>
 
 
