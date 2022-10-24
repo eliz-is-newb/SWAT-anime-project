@@ -31,7 +31,8 @@ Rails.application.routes.draw do
   get '/find/:anime_title', to: "animes#show"
   get '/watch/:mal_id', to: "animes#show_episodes"
 
-
+  get '/see/popular', to: "animes#show_popular_shows"
+  get '/see/new', to: "animes#show_recently_released_episodes"
  
   # ʚ♥ɞ routes that fucking hate me                                       
   # get '/show/lr_animes', to: "lr_animes#index"

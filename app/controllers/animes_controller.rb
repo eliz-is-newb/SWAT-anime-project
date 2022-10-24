@@ -1,6 +1,6 @@
 class AnimesController < ApplicationController
 
-  skip_before_action :authorize, only: [:index, :show, :show_episodes]
+  skip_before_action :authorize, only: [:index, :show, :show_episodes, :show_popular_shows, :show_recently_released_episodes]
   rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response 
   rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity_response 
 
@@ -37,7 +37,20 @@ def show_episodes
          :episode => episode,
          :genre => genre }
 end 
+
+def show_popular_shows
+    url = "http://localhost:5005/popular"
+    response = RestClient.get(url)
+    data = JSON.parse(response)
+    render json: data  
+end 
  
+def show_recently_released_episodes
+  url = "http://localhost:5005/animix/recent-episodes"
+  response = RestClient.get(url)
+  data = JSON.parse(response)
+  render json: data  
+end 
   
 
 

@@ -1,0 +1,18 @@
+
+      .shadow {
+       
+        -webkit-filter: drop-shadow(5px 10px 8px #0a0a0a);
+        filter: drop-shadow(-1px 3.5px 2.5px #090909bd);
+      }
+
+     .outline {
+      
+        color: white;
+        text-shadow:
+            3px 3px 4px #000,
+          -1px -1px 0 #000,  
+           1px -1px 1px #000,
+           -1px 1px 1px #000,
+            1px 1px 0 #000;
+     }
+     

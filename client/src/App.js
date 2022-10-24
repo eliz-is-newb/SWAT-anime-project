@@ -5,20 +5,27 @@ import './index.css';
 import Home from './components/Home';
 import {BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Nav from './components/Nav';
-import ForumBoard from './boards/ForumBoard';
+import StreamingPage from './boards/StreamingPage';
 
 
 function App() {
 
   return (
     <div>
-      <Nav/>
+   
       <Router> 
           <Routes>
-          <Route exact key={1}    path="/"                 element={<Home />}/> 
-          <Route exact key={2}    path="/board"            element={<ForumBoard />}/>
+          <Route exact key={2}    path="/streaming"            element={<StreamingPage />}/>
+         
+          </Routes>
+       </Router>
 
-          </Routes> 
+       <Nav/>
+
+      <Router>
+         <Routes>
+          <Route exact key={1}    path="/"                     element={<Home />}/>
+         </Routes> 
       </Router>
     </div>
   );

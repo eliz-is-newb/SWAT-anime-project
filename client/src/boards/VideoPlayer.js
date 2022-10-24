@@ -3,7 +3,7 @@ import'../medium.ttf';
 import'../bold.ttf';
 import'../regular.ttf';
 
-const FormPosts = () => {
+const VideoPlayer = () => {
 
 return (
 
@@ -63,4 +63,4 @@ style={{
 
 
 )}
-export default FormPosts
+export default VideoPlayer

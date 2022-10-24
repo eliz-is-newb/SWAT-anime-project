@@ -74,16 +74,18 @@ return (
         <img style={{maxHeight:"35px"}} src="./grns.png"/>
         </a>
 
-        <div class="navbar-dropdown is-right"
-        style={{position: "absolute", right:"-10px", top:"60px", backgroundColor:"rgba(183, 3, 30, 1)", fontFamily:"bold-font", color:"white", borderRadius:"0px 0px 7px 7px", borderTop:"none"}}
+        <div class="navbar-dropdown is-left shadow"
+        style={{position: "absolute", right:"-500px", top:"95px", backgroundColor:"black", fontFamily:"bold-font", color:"black", borderRadius:"9px 9px 7px 7px", borderTop:"none", width: "500px", fontSize:"20px", border:"white solid 3px"}}
         >
-          <a class="navbar-item">
+          {/* ├┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┤ᴥ•ʔっ♥ Genre Buttons Starter Kit (below) ├┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┤ */}
+
+          <a style={{color: "white", }} class="navbar-item">
             About
           </a>
-          <a class="navbar-item">
+          <a style={{color: "white"}} class="navbar-item">
             Jobs
           </a>
-          <a class="navbar-item">
+          <a style={{color: "white"}} class="navbar-item">
            Help
           </a>
           

@@ -24,8 +24,10 @@ return (
     <div id="Banner-wrapper"
     style={{ marginLeft:"25px", paddingTop:"40px", width: "900px", display: "flex", justifyContent: "center",}}
     >
-        <img 
-        style={{position:"relative", top:"20px", left:"460px", width:"450px"}}
+        <img className="shadow"
+        style={{position:"relative", top:"20px", left:"460px", width:"450px", 
+        textShadow: "2px 8px 10px #000000"
+    }}
         src="./banner.png" />
     </div>
     <div id="Boards-wrapper"

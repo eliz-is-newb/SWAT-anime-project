@@ -26,37 +26,41 @@ return (
     style={{paddingTop: "20px", paddingRight:"40px", backgroundColor: "transparent", }}
     >
 
-<a><img
-style={{ maxHeight:"35px"}}
+<a><img className="shadow"
+style={{ maxHeight:"35px", dropShadow: "(16px 16px 10px black)" }}
 src="./lib.png" />
     </a>  
 
 {/* ├┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┤ᴥ•ʔっ♥ Form for Login (below) ├┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┤ */}
           
-        <div class="navbar-dropdown is-right"
+        <div class="navbar-dropdown is-right shadow"
             
                 style={{
+                position:"absolute",
+                top:"-360px",
+                left:"-800px",
                 padding:"2rem",
                 paddingInline:"2rem",
-                marginTop:"10px", 
+                marginTop:"20px", 
                 marginRight:"33px",
-                height: "200px",
+                height: "230px",
                 width:"250px",
                 backgroundColor:"black", 
                 fontFamily:"bold-font", 
                 color:"white", 
-                border:"black",
+                border:"white solid 3px",
+                
              
-                borderRadius:"7px"}}>
+                borderRadius:"9px 9px 7px 7px"}}>
 
 
                                     {/* ʚ♥ɞ Start of Form ʚ♥ɞ */}
-                                    <p style={{fontFamily: "bold-font", fontSize:"20px", marginBottom:"10px", }}></p>
+                                    <p style={{fontFamily: "bold-font", fontSize:"20px", marginBottom:"10px"}}></p>
 
                                     {/* ʚ♥ɞ Email Input */}
                                     <div class="field">
                                     
-                                    <input class="input is-small " type="email" placeholder="Email"/>
+                                    <input class="input " type="email" placeholder="Email"/>
                                     <p class="control ">
                                     
                                     </p>
@@ -66,14 +70,14 @@ src="./lib.png" />
                                     {/* ʚ♥ɞ Password Input */}
                                     <div class="field">
                                     <p class="control">
-                                    <input class="input is-small" type="password" placeholder="Password"/>
+                                    <input class="input" type="password" placeholder="Password"/>
                                     </p>
                                     </div>
 
                                      {/* ʚ♥ɞ Form Submit Button */}
                                     <div class="field">
                                     <p class="control">
-                                    <button style={{fontFamily:"bold-font", fontSize:"14px", marginTop:"7px", borderRadius:"7px", backgroundColor: "rgba(183, 3, 30, 1)"}} class="button is-small is-dark">
+                                    <button style={{fontFamily:"bold-font", fontSize:"16px", marginTop:"7px", borderRadius:"7px", backgroundColor: "rgba(183, 3, 30, 1)"}} class="button is-medium is-dark">
                                     Login
                                     </button>
                                     </p>
