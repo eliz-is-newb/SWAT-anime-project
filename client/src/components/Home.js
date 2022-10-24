@@ -22,10 +22,10 @@ return (
  > 
 
     <div id="Banner-wrapper"
-    style={{ marginLeft:"225px", paddingTop:"175px", width: "900px", display: "flex", justifyContent: "center",}}
+    style={{ marginLeft:"25px", paddingTop:"40px", width: "900px", display: "flex", justifyContent: "center",}}
     >
         <img 
-        style={{position:"absolute", top:"104px", left:"460px", width:"450px"}}
+        style={{position:"relative", top:"20px", left:"460px", width:"450px"}}
         src="./banner.png" />
     </div>
     <div id="Boards-wrapper"

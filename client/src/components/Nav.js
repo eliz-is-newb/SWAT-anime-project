@@ -3,6 +3,15 @@ import LoginButton from "./LoginButton";
 import SignUpButton from "./SignUpButton";
 
 const Nav = () => {
+
+  const [showForm, setShowForm] = useState(true)
+  function handleDropDown4() { 
+    var dropdown4 = document.querySelector('#genres')
+    dropdown4.classList.toggle('is-active')
+    setShowForm(prev =>!prev)
+}
+
+
 return (
 
 
@@ -13,11 +22,11 @@ return (
    style={{ backgroundColor:"black", paddingBottom:"70px",paddingTop:"20px", maxHeight:"60px"}}
    role="navigation" aria-label="main navigation">
   <div class="navbar-brand"
-  style={{paddingRight:"100px", width:"200px", maxHeight:"50px"}}
+  style={{paddingRight:"100px", width:"10px", maxHeight:"50px"}}
   >
     <a class="navbar-item" href="/">
       <p
-      style={{paddingLeft:"41px",paddingTop:"0px", width:"400px", maxHeight:"300px", fontFamily:"bold-font", color:"white", fontSize:"25px",}}
+      style={{paddingLeft:"30px",paddingTop:"0px", width:"300px", maxHeight:"300px", fontFamily:"bold-font", color:"white", fontSize:"25px",}}
       > </p>
     </a>
 
@@ -25,16 +34,16 @@ return (
 
   <div id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-start"
-    style={{paddingLeft: "60px", width:"600px", paddingTop: "13px", fontFamily:"bold-font", display:"flex", justifyContent:"center"}}
+    style={{paddingLeft: "0px", width:"400px", paddingTop: "13px", fontFamily:"bold-font", display:"flex", justifyContent:"center"}}
     >
       <a>
 
       <div class="control"
-      style={{paddingLeft:"20px", marginLeft:"225px", paddingRight:"20px"}}
+      style={{paddingLeft:"20px", marginLeft:"1250px", paddingRight:"20px"}}
       >
         <input 
-        style={{borderRadius: "4px", width:"650px",maxWidth:"120%", height:"27px", backgroundColor:"white", border:"black 1px solid", color:"black"}}
-        class="input is-small" type="search" placeholder="Search..."/>
+        style={{borderRadius: "4px", width:"450px",maxWidth:"120%", height:"35px", backgroundColor:"white", border:"black 1px solid", color:"black"}}
+        class="input is-normal" type="search" placeholder="Search..."/>
          <span>
          <i
          style={{paddingBottom:"3px"}}
@@ -56,17 +65,17 @@ return (
   <LoginButton />
   <SignUpButton />
 
-    <div class="navbar-item has-dropdown is-hoverable is-trigger"
-    style={{paddingTop: "20px", paddingRight:"40px", backgroundColor: "transparent"}}
+    <div className="navbar-item has-dropdown is-trigger" id="genres" onClick={handleDropDown4}
+    style={{ backgroundColor: "transparent", position: "absolute", top:'30px', left:"1200px"}}
     >
         <a 
-        style={{backgroundColor:"transparent"}}
-        className="navbar-item">
-        <img src="./invert.png"/>
+        style={{backgroundColor:"rgba(183, 3, 30, 1)", border:"1.5px transparent solid", }}
+        className="navbar-item button">
+        <img style={{maxHeight:"35px"}} src="./grns.png"/>
         </a>
 
         <div class="navbar-dropdown is-right"
-        style={{marginTop:"20px", marginRight:"20px", backgroundColor:"black", fontFamily:"regular-font", color:"white", border:"1px black solid", borderRadius:"7px"}}
+        style={{position: "absolute", right:"-10px", top:"60px", backgroundColor:"rgba(183, 3, 30, 1)", fontFamily:"bold-font", color:"white", borderRadius:"0px 0px 7px 7px", borderTop:"none"}}
         >
           <a class="navbar-item">
             About

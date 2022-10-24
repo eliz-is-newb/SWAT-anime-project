@@ -21,7 +21,7 @@ return (
 
 <>
 
-<div style={{ marginTop:"400px", width: "400px", position:"absolute", left:"590px", top: "-5px"}}>
+<div style={{ marginTop:"400px", width: "400px", position:"absolute", left:"846px", top: "58px"}}>
 <div class="navbar-item has-dropdown is-trigger is-hoverable" id="login" onClick={handleDropDown2}
     style={{paddingTop: "20px", paddingRight:"40px", backgroundColor: "transparent", }}
     >
@@ -45,8 +45,8 @@ src="./lib.png" />
                 backgroundColor:"black", 
                 fontFamily:"bold-font", 
                 color:"white", 
-        
-                borderTop:"none",
+                border:"black",
+             
                 borderRadius:"7px"}}>
 
 
@@ -56,7 +56,7 @@ src="./lib.png" />
                                     {/* ʚ♥ɞ Email Input */}
                                     <div class="field">
                                     
-                                    <input class="input is-small is-dark" type="email" placeholder="Email"/>
+                                    <input class="input is-small " type="email" placeholder="Email"/>
                                     <p class="control ">
                                     
                                     </p>
@@ -66,14 +66,14 @@ src="./lib.png" />
                                     {/* ʚ♥ɞ Password Input */}
                                     <div class="field">
                                     <p class="control">
-                                    <input class="input is-small is-dark" type="password" placeholder="Password"/>
+                                    <input class="input is-small" type="password" placeholder="Password"/>
                                     </p>
                                     </div>
 
                                      {/* ʚ♥ɞ Form Submit Button */}
                                     <div class="field">
                                     <p class="control">
-                                    <button style={{fontFamily:"bold-font", fontSize:"12px", marginTop:"5px"}} class="button is-small is-dark">
+                                    <button style={{fontFamily:"bold-font", fontSize:"14px", marginTop:"7px", borderRadius:"7px", backgroundColor: "rgba(183, 3, 30, 1)"}} class="button is-small is-dark">
                                     Login
                                     </button>
                                     </p>

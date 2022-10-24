@@ -20,7 +20,7 @@ return (
 
 <>
 <div 
-    style={{marginTop:"395px", position:"absolute", left:"675px", top: "-8px"}}>
+    style={{marginTop:"395px", position:"absolute", left:"935px", top: "55px"}}>
 
   
 <div class="navbar-item has-dropdown is-trigger is-hoverable" id="signup" onClick={handleDropDown3}
@@ -42,14 +42,14 @@ src="./sub.png" />
                 padding:"2rem",
                 paddingInline:"2rem",
                 marginTop:"7px", 
-                marginRight:"-130px",
+                marginRight:"-18px",
                 height: "290px",
                 width:"250px",
                 backgroundColor:"black", 
                 fontFamily:"bold-font", 
                 color:"white", 
                 borderTop:"none",
-                border:"1px black solid",
+                border:"6px black solid",
                 borderRadius:"7px"}}>
 
 
@@ -59,7 +59,7 @@ src="./sub.png" />
                                     {/* ʚ♥ɞ Username Input */}
                                     <div class="field">
                                     
-                                    <input class="input is-small is-light" type="username" placeholder="Create username"/>
+                                    <input class="input is-small " type="username" placeholder="Create username"/>
                                     <p class="control ">
                                     
                                     </p>
@@ -69,7 +69,7 @@ src="./sub.png" />
                                     {/* ʚ♥ɞ Email Input */}
                                     <div class="field">
                                     
-                                    <input class="input is-small is-light" type="email" placeholder="Enter Email"/>
+                                    <input class="input is-small " type="email" placeholder="Enter Email"/>
                                     <p class="control ">
                                     
                                     </p>
@@ -79,21 +79,21 @@ src="./sub.png" />
                                     {/* ʚ♥ɞ Password Input */}
                                     <div class="field">
                                     <p class="control">
-                                    <input class="input is-small is-light" type="password" placeholder="Choose Password"/>
+                                    <input class="input is-small " type="password" placeholder="Choose Password"/>
                                     </p>
                                     </div>
 
                                      {/* ʚ♥ɞ Re-enter Password Input */}
                                      <div class="field">
                                     <p class="control">
-                                    <input class="input is-small is-light" type="password" placeholder="Re-enter Password"/>
+                                    <input class="input is-small " type="password" placeholder="Re-enter Password"/>
                                     </p>
                                     </div>
 
                                      {/* ʚ♥ɞ Form Submit Button */}
                                     <div class="field">
                                     <p class="control">
-                                    <button style={{fontFamily: "bold-font", fontSize:'12px', marginTop:"5px"}} class="button is-small is-light">
+                                    <button style={{fontFamily: "bold-font", fontSize:'14px', marginTop:"5px", backgroundColor:"rgba(183, 3, 30, 1)", borderRadius:"7px"}} class="button is-small is-dark">
                                     Sign Up! 
                                     </button>
                                     </p>

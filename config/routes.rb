@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   resources :lr_animes
   resources :weekly_top_animes
 
-  # ʚ♥ɞ user's routes - handling authentication
+  # ʚ♥ɞ user's routes - handling authentication / authorization         
   resources :users, only: [:create, :show]
   resources :sessions, only: [:create, :destroy]
   
@@ -23,21 +23,22 @@ Rails.application.routes.draw do
   get "/me", to: "users#show"
 
 
-  # ʚ♥ɞ anime 
+  # ʚ♥ɞ anime                                                            
   get '/anime_info', to: "animes#index"
-    # this route is for all anime data 
+    # this route was for all the anime data but idk now, it fucking hates me. 
 
+    # the only two tricks my nifty backend can do 
   get '/find/:anime_title', to: "animes#show"
+  get '/watch/:anime_title', to: "animes#show_episodes"
 
 
-
-
+ 
+  # ʚ♥ɞ routes that fucking hate me                                       
   # get '/show/lr_animes', to: "lr_animes#index"
   # get '/show/weekly_top', to: "weekly_top_animes#index"
 
   # get '/show/lr_animes', to: "lr_animes#show"
   # get '/show/weekly_top', to: "weekly_top_animes#show"
-
 
  
 
