@@ -28,7 +28,8 @@ Rails.application.routes.draw do
     # this route is for all anime data 
 
   get '/find/:anime_title', to: "animes#show"
-  get '/genre_search/:genres', to: "genres#search_by_genre"
+
+
 
 
   # get '/show/lr_animes', to: "lr_animes#index"

@@ -1,0 +1,95 @@
+import React, {useState} from "react";
+import LoginButton from "./LoginButton"; 
+import SignUpButton from "./SignUpButton";
+
+const Nav = () => {
+return (
+
+
+<>
+ <div id="Nav-wrapper"
+ > 
+   <nav class="navbar"
+   style={{ backgroundColor:"black", paddingBottom:"70px",paddingTop:"20px", maxHeight:"60px"}}
+   role="navigation" aria-label="main navigation">
+  <div class="navbar-brand"
+  style={{paddingRight:"100px", width:"200px", maxHeight:"50px"}}
+  >
+    <a class="navbar-item" href="/">
+      <p
+      style={{paddingLeft:"41px",paddingTop:"0px", width:"400px", maxHeight:"300px", fontFamily:"bold-font", color:"white", fontSize:"25px",}}
+      > </p>
+    </a>
+
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start"
+    style={{paddingLeft: "60px", width:"600px", paddingTop: "13px", fontFamily:"bold-font", display:"flex", justifyContent:"center"}}
+    >
+      <a>
+
+      <div class="control"
+      style={{paddingLeft:"20px", marginLeft:"225px", paddingRight:"20px"}}
+      >
+        <input 
+        style={{borderRadius: "4px", width:"650px",maxWidth:"120%", height:"27px", backgroundColor:"white", border:"black 1px solid", color:"black"}}
+        class="input is-small" type="search" placeholder="Search..."/>
+         <span>
+         <i
+         style={{paddingBottom:"3px"}}
+         >
+         
+
+         </i>
+        </span>
+        </div>
+      </a>
+
+      
+
+     
+
+  
+  </div>
+
+  <LoginButton />
+  <SignUpButton />
+
+    <div class="navbar-item has-dropdown is-hoverable is-trigger"
+    style={{paddingTop: "20px", paddingRight:"40px", backgroundColor: "transparent"}}
+    >
+        <a 
+        style={{backgroundColor:"transparent"}}
+        className="navbar-item">
+        <img src="./invert.png"/>
+        </a>
+
+        <div class="navbar-dropdown is-right"
+        style={{marginTop:"20px", marginRight:"20px", backgroundColor:"black", fontFamily:"regular-font", color:"white", border:"1px black solid", borderRadius:"7px"}}
+        >
+          <a class="navbar-item">
+            About
+          </a>
+          <a class="navbar-item">
+            Jobs
+          </a>
+          <a class="navbar-item">
+           Help
+          </a>
+          
+      </div>
+    </div>
+
+
+  </div>
+</nav>
+
+</div>
+
+</>
+
+
+
+)}
+export default Nav

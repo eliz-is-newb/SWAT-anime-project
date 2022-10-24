@@ -15,6 +15,7 @@ gem 'json', '~> 2.6', '>= 2.6.2'
 gem 'kaminari'
 gem 'activerecord-import'
 gem 'active_model_serializers'
+gem 'webpacker', '~> 4.3.x'
 
 
 gem 'opal-rails', '~> 2.0', '>= 2.0.2'
