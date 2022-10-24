@@ -1,6 +1,6 @@
 class AnimesController < ApplicationController
 
-  skip_before_action :authorize, only: [:show, :search]
+  skip_before_action :authorize, only: [:index, :show, :show_episodes]
   rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response 
   rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity_response 
 
@@ -9,20 +9,34 @@ class AnimesController < ApplicationController
 def index 
   Anime.all
 
+  #method to only display the animes that match the mal_id to the entries of lr_anime, weekly_anime 
 end 
 
 
   def show 
-    anime = Anime.where("anime_title = ?", params[:anime_title]).first 
-    episode = Episode.where("mal_id = ?", anime.mal_id)
-    genre = Genre.where("mal_id = ?", anime.mal_id)
+    query = params[:anime_title]
 
-    render json: {:anime => anime, 
+    anime = Anime.where("anime_title ilike ?", "%#{query}%")
+    episode = Episode.where("mal_id ilike ?",  "%#{query}%")
+    genre = Genre.where("mal_id ilike ?", "%#{query}%")
+
+    render json: {:anime => anime,
+
            :episode => episode,
            :genre => genre }
   end 
 
+def show_episodes 
+  query = params[:anime_title]
 
+  anime = Anime
+  episode = Episode.where("mal_id = ?",  anime.mal_id)
+  genre = Genre.where("mal_id = ?", anime.mal_id)
+
+  render json: {:anime => anime,
+         :episode => episode,
+         :genre => genre }
+end 
  
   
 
