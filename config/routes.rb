@@ -29,7 +29,7 @@ Rails.application.routes.draw do
 
     # the only two tricks my nifty backend can do 
   get '/find/:anime_title', to: "animes#show"
-  get '/watch/:anime_title', to: "animes#show_episodes"
+  get '/watch/:mal_id', to: "animes#show_episodes"
 
 
  

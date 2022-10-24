@@ -27,9 +27,9 @@ end
   end 
 
 def show_episodes 
-  query = params[:anime_title]
+  query = params[:mal_id]
 
-  anime = Anime
+  anime = Anime.find_by(mal_id: query)
   episode = Episode.where("mal_id = ?",  anime.mal_id)
   genre = Genre.where("mal_id = ?", anime.mal_id)
 
