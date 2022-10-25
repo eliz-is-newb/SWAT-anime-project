@@ -3,6 +3,7 @@ import'../medium.ttf';
 import'../bold.ttf';
 import'../regular.ttf';
 import VideoPlayer from "./VideoPlayer";
+import DashboardNav from "./DashboardNav";
 
 const StreamingPage = () => {
 
@@ -12,14 +13,16 @@ return (
 <>
 <div id="page-background-wrapper"
 style={{
+    overflow: "clip",
     height: "120vh",
     backgroundColor: "black",
     backgroundSize: "cover", 
 
  }}>
+<DashboardNav />
 
 <div id="page-elements-wrapper"
-style={{display: "flex", justifyContent: "center", position: "relative",
+style={{display: "flex", justifyContent: "center", position: "absolute",
 
  paddingTop:"48px",
  paddingLeft:"10px"  
@@ -38,19 +41,9 @@ style={{
     
 
 <div id="board-title">
-            <div style={{
-                display:"flex", justifyContent:"center",
-                width:"184px",
-                paddingTop:"20px", paddingBottom:"20px", borderRadius:"10px",
-                backgroundColor: "black", border:"white 1px solid",
-                fontFamily:"bold-font",
-                fontSize:"20px",
-                color:"white",
             
-                
-                }}>
             
-            Anime & Manga
+
 
             </div>
 
@@ -59,7 +52,7 @@ style={{
 
 </div>
 
-            <div  style={{
+            {/* <div  style={{
                 width: "90vw",
                 display:"flex",
                 flexWrap: "wrap",
@@ -70,7 +63,7 @@ style={{
                     <VideoPlayer />
                     ))}
 
-            </div>
+            </div> */}
                        
 <div id="board-comments">
 
@@ -80,7 +73,7 @@ style={{
 
 </div>
 
-</div>
+
 </div>
 
 

@@ -16,6 +16,7 @@ gem 'kaminari'
 gem 'activerecord-import'
 gem 'active_model_serializers'
 gem 'webpacker', '~> 4.3.x'
+gem 'rack-cors'
 
 
 gem 'opal-rails', '~> 2.0', '>= 2.0.2'

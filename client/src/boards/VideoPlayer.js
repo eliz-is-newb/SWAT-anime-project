@@ -16,11 +16,9 @@ style={{
     fontFamily:"bold-font", 
     fontSize:"25px",
     borderRadius: "7px",
-    padding:"2rem",
-    width:"60vw",
-    maxWidth:"400px",
+    width:"40px",
     backgroundColor: "rgba(255, 255, 255, 0.501)",
-    margin: "1rem"
+    margin: "1rem",
     }}
 >
 <p>

@@ -35,11 +35,7 @@ Rails.application.routes.draw do
   get '/see/new', to: "animes#show_recently_released_episodes"
  
   # ʚ♥ɞ routes that fucking hate me                                       
-  # get '/show/lr_animes', to: "lr_animes#index"
-  # get '/show/weekly_top', to: "weekly_top_animes#index"
 
-  # get '/show/lr_animes', to: "lr_animes#show"
-  # get '/show/weekly_top', to: "weekly_top_animes#show"
 
  
 

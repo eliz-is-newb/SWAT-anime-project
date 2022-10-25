@@ -1,4 +1,6 @@
-
+html, body{
+    overflow: scroll;
+}
       .shadow {
        
         -webkit-filter: drop-shadow(5px 10px 8px #0a0a0a);
