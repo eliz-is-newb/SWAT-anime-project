@@ -11,6 +11,7 @@ function Library(){
             <CoreBar />
             
             <Map />
+            
             <CoreFooter />
         </>
     );

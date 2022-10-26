@@ -33,6 +33,7 @@ Rails.application.routes.draw do
 
   get '/see/popular', to: "animes#show_popular_shows"
   get '/see/new', to: "animes#show_recently_released_episodes"
+
  
   # ʚ♥ɞ routes that fucking hate me                                       
 

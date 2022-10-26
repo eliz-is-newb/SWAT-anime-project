@@ -4,7 +4,7 @@ function LandingFooter(){
     return (
         <Footer className="p-10">
             <div>
-                <img src="/assets/img/logo.png" alt="MindGarden" className="w-20 h-20"/>
+                <img src="/assets/img/logo.png" alt="logo" className="w-20 h-20"/>
                 <p>
                     SillyTsundereTV
                     <br />
