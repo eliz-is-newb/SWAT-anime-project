@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "medium-font";
+  src: url(./medium.ttf);
+}
+
+@font-face {
+  font-family: "regular-font";
+  src: url(./regular.ttf);
+
+}
+
+@font-face {
+  font-family: "bold-font";
+  src: url(./bold.ttf);
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+

@@ -18,10 +18,10 @@ return (
         
             borderRadius: "7px",
             padding:"2rem",
-            width:"200px",
-            height:"300px",
+            width:"210px",
+            height:"310px",
             backgroundColor: "rgba(255, 255, 255, 0.501)",
-            margin: "1.3rem",
+            margin: "1.2rem",
             }}>
 
 
@@ -32,9 +32,10 @@ return (
     <div>
         <p 
         style={{
+        fontFamily: "bold-font",
         fontSize:"25px", 
         position:"absolute", top:"40px", 
-        left:"220px", 
+        left:"230px", 
         backgroundColor:"black", 
         color:"white",
         borderRadius: "0px 9px 9px 0px",

@@ -18,10 +18,17 @@ return (
     <div id="Page-wrapper"
      style={{
         fontFamily: "medium-font",
-        height: "140vh",
+        height: "310vh",
         width:"100%",
-        backgroundImage: "url(./background.png)",
-        backgroundSize: "cover", 
+        backgroundColor:"rgba(169, 204, 67, 1)",
+
+     }}> 
+       <div
+     style={{
+        height: "60vh",
+        width:"100%",
+        backgroundColor:"rgba(225, 238, 182, 1)",
+
      }}> 
 
          <div 
@@ -32,7 +39,7 @@ return (
                 display: "flex", 
                 justifyContent: "center",
                 }}>
-                <img className="shadow"
+                <img className=""
                 style={{
                     position:"relative", 
                     top:"20px", 
@@ -43,7 +50,7 @@ return (
         </div>
         <div 
             style={{
-                paddingTop:"30px", 
+                paddingTop:"20px", 
                 display:"flex"
                 }}>
 
@@ -52,12 +59,12 @@ return (
                 style={{
                     position:"absolute", 
                     top:"685px", 
-                    left:"150px", 
+                    left:"138px", 
                     width:"260px", 
                     textShadow: "2px 8px 10px #000000"
                  }} src="./newu.png" />
 
-        <div style={{position:"absolute", top:"760px", left: "110px"}}>
+        <div style={{position:"absolute", top:"755px", left: "120px"}}>
     
             <div style={{}}>
                 <AnimeCardsNew /> 
@@ -85,7 +92,7 @@ return (
                             display:"flex",
                             flexWrap: "wrap",
                             alignItems: "flex-start",
-                            marginTop:"2rem"
+                            marginTop:"1rem"
                         }}>
 
                     {popData.map(card => { return <AnimeCardsPopular key={card.id} popData={card}/>
@@ -115,7 +122,7 @@ return (
 
 
     
-
+</div>
          </div>
 
     </div>
