@@ -1,6 +1,10 @@
+import { useEffect, useState } from "react";
+import {useParams} from "react-router-dom";
+import AnimeStreamPlayer from "./AnimeStreamPlayer"
 
-function VideoMap{
+function VideoMap () {
     const [videoData, setVideoData] = useState({}) 
+    const [episodes,setEpisodes] = useState([])
     const params = useParams()
 
     useEffect(() => {
@@ -8,6 +12,7 @@ function VideoMap{
 		let req = await fetch("http://localhost:3000/watch/"+params.id) 
 		let res = await req.json()
 		setVideoData(res)
+        setEpisodes(res.episode)
 		} 
 		getData() 
 	}, []) 
@@ -15,18 +20,26 @@ function VideoMap{
     console.log(videoData)
 
     return (
-        <>
-            
-            <div className="mt-30  bg-lime-500 flex justify-center">
-           
-            <h1  className="text-5xl text-black font-bold mt-4 mb-2 mx-10 px-10"> 
-             {videoData?.anime?.anime_title} </h1>
-             <span className="text-5xl text-black font-bold mt-4 mb-20 px-10"> Watching: {videoData?.episode?.ep_num} </span>
-            <iframe src={videoData?.episode?.link}> </iframe>
-            </div>
+      <>
+        {episodes.map((item)=>{
+            <h1>HI</h1>
+        })}
+    {/* Map here */}
 
+ {/* {videoData.flatMap(card, episode }) => (episode.map => {return <AnimeStreamPlayer key={card.id} videoData={card}/>  
+    
+               })} */}
+{/* 
 
-        </>
+const output = responses.flatMap(({ videoData }) =>
+  videoData.episode.map(({ card }) => ({ key={card.id} videoData={card}
+    id: data.id,
+    name: data.capacity,
+    date: name,
+  }))
+); */}
+
+     </> 
     );
 }
 
