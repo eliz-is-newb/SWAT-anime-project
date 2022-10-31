@@ -11,7 +11,7 @@ function AnimeLibrary({popData}) {
 
 
     {/* Grid for Popular */}
-    <div className="flex flex-col gap-1">
+    <div className="flex flex-col gap-1.5">
       {/* Image */}
       <a href="" className="bg-white">
         <img src={popData.animeImg} className="hover:translate-x-2 hover:-translate-y-2 delay-50 duration-100" />

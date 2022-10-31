@@ -26,22 +26,25 @@ function AnimeStreamPlayer({videoData}){
     // console.log(videoData)
     return (
         <>
-         <h1  className="text-5xl bg-lime-500 text-black font-bold mt-4 mb-10 mx-10 px-10"> 
+         <h1  className="text-5xl bg-white text-black font-bold mt-4 mb-10 mx-10 px-10"> 
            Watching: {videoData1?.anime?.anime_title} </h1>
             {episodes.map((item)=>{
                 return (
                     
-            <div className="mt-30 bg-lime-500 flex">
+            <div className="mt-30 bg-white flex" style={{ marginRight:"-400px", }}>
 
             
          
-            <div id="item1" className="carousel-item w-full">
+            <div id="item1" className="carousel-item ">
             
-            <iframe allow="fullscreen" width="900" height="600" style={{}} src={item.link}> </iframe> 
+            <iframe className="focus: w-full"
+            allowfullscreen="allowfullscreen" src={item.link}
+            style={{position:"relative", width:"900px", left:"270px", marginTop:"80px",marginRight:"-10px", height:"520px", border:"4px solid black", borderRadius:"4px" , padding:"10px", marginBottom:"40px"}}
+            > </iframe> 
             </div> 
         
-            <div className="flex justify-center w-full -ml-72 py-2 gap-2">
-            <a href="#item1" className="font-bold text-4xl text-black "> Episode: {item.ep_num}</a> 
+            <div className="-ml-72" style={{position:"relative",zIndex:"-0", marginTop:"605px", marginLeft:"160px"}}>
+            <a href="#item" className="text-2xl font-bold bg-lime-500 text-black"> &nbsp;Episode {item.ep_num}&nbsp; </a> 
             </div>
             </div>
  )})}

@@ -9,9 +9,7 @@ function Library(){
     return (
         <>
             <CoreBar />
-            
             <Map />
-            
             <CoreFooter />
         </>
     );

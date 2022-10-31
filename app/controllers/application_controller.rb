@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
-    include ActionController::Cookies 
+    include ActionController::Cookies
+    protect_from_forgery prepend: true
     before_action :authorize
     helper_method :logged_in?, :current_user 
 

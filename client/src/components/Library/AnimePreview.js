@@ -30,7 +30,7 @@ function AnimePreview({newData}) {
       {/* Category Tags */}
       <div className="flex flex-row flex-wrap gap-2 mt-1">
         {/* Map This */}
-        <a href={`/streamplayer/${newData.mal_id}`} className="hover:bg-lime-500 text-black text-xs font-semibold bg-gray-500 px-2 py-1 rounded-full"> Play </a>
+        <a href={`/streamplayer/${newData.mal_id}`} className="hover:bg-lime-500 mb-6 text-black text-xs font-semibold bg-gray-500 px-2 py-1 rounded-full"> Play </a>
       </div>      
 
    </div>

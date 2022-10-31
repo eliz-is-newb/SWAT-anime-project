@@ -8,7 +8,7 @@ function AnimeCarousel() {
  
 
   return (
-    <Carousel className="rounded-box  mx-20 h-2/6">
+    <Carousel className="rounded-box  mx-32 -p-2" style={{border: "solid 5px black",borderRadius:"1px"}}>
   
       <Carousel.Item
         src="/assets/img/sample-anime-2.jpg"
