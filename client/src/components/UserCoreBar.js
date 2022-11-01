@@ -1,25 +1,25 @@
 import { Navbar, Button, Menu, Link, Form, Input } from 'react-daisyui';
 import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
 
-function UserCoreBar({ user, setUser }){
+
+function UserCoreBar(){
 
 // fetch deleting our session on log out. 
 
 const navigate = useNavigate();
 
-function handleLogOut() {
-    fetch('http://localhost/logout', {
-        method: 'DELETE',
+// function handleLogOut() {
+//     fetch('http://localhost/logout', {
+//         method: 'DELETE',
 
-      })
+//       })
       
-      then((r) => {
-        if (r.ok) {
-          setUser(null);
-        }
-      });
-    }
+//       then((r) => {
+//         if (r.ok) {
+//           setUser(null);
+//         }
+//       });
+//     }
 
 
 
@@ -42,7 +42,7 @@ return (
                 </Navbar.Center>
                 <Navbar.End className='space-x-4 m-1 font-sans'>
                     <Button variant="outline" href="/dashboard">Dashboard</Button>  
-                     <Button color="primary" onClick={handleLogOut} >Log out</Button>
+                     <Button color="primary" >Log out</Button>
                 </Navbar.End>
             </Navbar>
         </div>

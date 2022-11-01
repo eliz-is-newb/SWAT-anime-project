@@ -21,19 +21,6 @@ import UserCoreBar from './components/UserCoreBar';
 // import Dashboard from './views/Dashboard';
 
 // user login/signup sessions stuff 
-const [user, setUser] = useState(null);
-
-useEffect(() => {
-  // auto-login
-  fetch("http://localhost:3000/me").then((r) => {
-    if (r.ok) {
-      r.json().then((user) => setUser(user));
-    }
-  });
-}, []);
-
-if (!user) return <Login onLogin={setUser} />;
-\
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -50,8 +37,8 @@ root.render(
         <Route path="/register" element={<Register />} /> 
         <Route path="/loggedin" element={<UserLoggedInLanding />} />
         {/* Dashboard Pages */}
-        <Route path="/dashboard" element={<Dashboard user={user} />} />
-        <Route path="/home/:id"      elemennt={<UserCoreBar  user={user} setUser={setUser}  />}/> 
+        <Route path="/dashboard" element={<Dashboard  />} />
+        <Route path="/home/:id"      elemennt={<UserCoreBar  />}/> 
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
