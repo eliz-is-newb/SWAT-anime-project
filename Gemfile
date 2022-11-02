@@ -9,6 +9,10 @@ gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
 # Use Postgres as the database for Active Record
 gem 'pg'
 
+# authentication/login tokens
+gem 'jwt'
+gem 'simple_command'
+
 
 gem 'rest-client', '~> 2.1.0'
 gem 'json', '~> 2.6', '>= 2.6.2'

@@ -14,7 +14,7 @@ module SWATAnime
     config.middleware.use ActionDispatch::Session::CookieStore 
 
     config.action_dispatch.cookies_same_site_protection = :strict 
-
+    config.autoload_paths << Rails.root.join('lib')
 
     # Configuration for the application, engines, and railties goes here.
     #

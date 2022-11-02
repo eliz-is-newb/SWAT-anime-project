@@ -13,17 +13,17 @@ function AnimeCarousel() {
     height:"400px",borderRadius:"1px"}}>
   
       <Carousel.Item
-      style={{border: "solid 5px black", height:"380px", margin:"2px", marginRight:"20px"}}
+      style={{ border:"1px solid black",height:"380px", margin:"2px", marginRight:"20px"}}
         src="/assets/img/sample-anime-2.jpg"
         alt="demo anime image 2"
       />
       <Carousel.Item
-       style={{border: "solid 5px black", height:"380px" , margin:"2px",  marginRight:"20px"}}
+       style={{border: "solid 1px black", height:"380px" , margin:"2px",  marginRight:"20px"}}
         src="/assets/img/sample-anime-3.jpg"
         alt="demo anime image 3"
       />
       <Carousel.Item
-       style={{border: "solid 5px black", height:"380px", margin:"2px", marginRight:"20px"}}
+       style={{border: "solid 1px black", height:"380px", margin:"2px", marginRight:"20px"}}
         src="/assets/img/sample-anime-5.png"
         alt="demo anime image 5"
       />

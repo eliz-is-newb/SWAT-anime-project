@@ -2,8 +2,7 @@ class CommentsController < ApplicationController
 
   rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response 
   rescue_from ActiveRecord::RecordInvalid, with: :render_unprocesssable_entity_response
-  before_action :authorize
-  skip_before_action :authorize, only: [:index]
+  before_action :authenticate_request
 
   def index
     comments = Comment.all

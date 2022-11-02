@@ -1,5 +1,7 @@
 class FollowersController < ApplicationController
-  before_action :set_follower, only:[ show edit update destroy ]
+  before_action: authenticate_request
+  before_action: :set_follower, only:[ show edit update destroy ]
+  
 
 
   # ʚ♥ɞ GET /followers 

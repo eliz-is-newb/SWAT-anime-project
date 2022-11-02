@@ -1,6 +1,6 @@
 class AnimesController < ApplicationController
 
-  skip_before_action :authorize, only: [:index, :show, :show_episodes, :show_popular_shows, :show_recently_released_episodes, :find_popular_show, :find_recently_released_episode]
+  skip_before_action :authenticate_request
   rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response 
   rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity_response 
 

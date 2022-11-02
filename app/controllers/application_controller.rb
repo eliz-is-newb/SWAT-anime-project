@@ -1,28 +1,14 @@
 class ApplicationController < ActionController::Base
-    include ActionController::Cookies
-    protect_from_forgery prepend: true
-    before_action :authorize
-    helper_method :logged_in?, :current_user 
+    protect_from_forgery with: :null_session
+    
+    before_action :authenticate_request
+        attr_reader :current_user
 
-    def current_user 
-        if session[:user_id]
-            @user = User.find(session[:user_id])
-        end
-    end 
+        private
 
-    def logged_in?
-        !!current_user
-    end 
-
-    def authorized
-        redirect_to login_path unless logged_in?
-    end
-
-    def authorize 
-        @current_user = User.find_by(id: session[:user_id])
-
-        render json: { errors: ["Not authorized"] }, 
-            status: :unauthorized unless @current_user 
-    end 
+        def authenticate_request
+            @current_user = AuthorizeApiRequest.call(request.headers).result 
+            render json: {error: 'Not Authorized '}, status: 401 unless @current_user 
+        end 
   
 end
