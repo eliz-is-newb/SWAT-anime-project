@@ -26,7 +26,7 @@ function AnimeStreamPlayer({videoData}){
     // console.log(videoData)
     return (
         <>
-         <h1  className="text-5xl bg-white text-black font-bold mt-4 mb-10 mx-10 px-10"> 
+         <h1  className="text-5xl bg-white text-black font-bold mt-4 ml-56 mb-10 mx-10 px-10"> 
            Watching: {videoData1?.anime?.anime_title} </h1>
             {episodes.map((item)=>{
                 return (
@@ -39,7 +39,7 @@ function AnimeStreamPlayer({videoData}){
             
             <iframe className="focus: w-full"
             allowfullscreen="allowfullscreen" src={item.link}
-            style={{position:"relative", width:"900px", left:"270px", marginTop:"80px",marginRight:"-10px", height:"520px", border:"4px solid black", borderRadius:"4px" , padding:"10px", marginBottom:"40px"}}
+            style={{position:"relative", width:"900px", left:"270px", marginTop:"80px",marginRight:"-10px", height:"510px", border:"5px solid black", borderRadius:"4px"}}
             > </iframe> 
             </div> 
         
