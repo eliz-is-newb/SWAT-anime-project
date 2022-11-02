@@ -5,7 +5,7 @@ function LandingHero() {
     <Hero className="text-black" id="home">
      <Hero.Content className="text-center">
         <div>
-            <img src="/assets/img/logo6.png" className="w-3/12 mx-auto mt-10" />
+            <img src="/assets/img/logo7.png" className="w-6/12 mx-auto mt-10 -mb-10" />
             <h1 className="text-5xl text-black font-bold mt-5 mb-2">Watch your anime elsewhere, obviously!</h1>
             <p> Watch Anime here for free in HD quality with English subbed or dubbed. </p>
            
