@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import "bootstrap/dist/css/bootstrap.min.css";
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AnimeInfo from './components/Library/AnimeInfo';
@@ -8,6 +9,8 @@ import Login from './components/Library/Login';
 import Register from './components/Library/Register';
 import UserLoggedInLanding from './views/UserLoggedInLanding';
 import './index.css';
+
+
 
 // Routes
 /* Landing Pages */
@@ -24,7 +27,7 @@ import UserCoreBar from './components/UserCoreBar';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+
     <BrowserRouter>
       <Routes>
         {/* Landing Pages */}
@@ -41,5 +44,5 @@ root.render(
         <Route path="/home/:id"      elemennt={<UserCoreBar  />}/> 
       </Routes>
     </BrowserRouter>
-  </React.StrictMode>
+
 );

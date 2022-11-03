@@ -19,7 +19,7 @@ function LandingBar(){
                 </Navbar.Center>
                 <Navbar.End className='space-x-4 m-1 font-sans'>
                     <Button variant="outline" className="text-white  hover:text-purple-600" href="login">Login</Button>
-                    <Button color="primary"className="bg-white hover:bg-lime-400   text-black" href="register">register</Button>
+                    <Button color="primary"className="bg-white hover:bg-lime-400   text-black" href="/register">register</Button>
                 </Navbar.End>
             </Navbar>
         </div>

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'sessions/new'
+
   resources :followers
   resources :comments, only: [:index, :create, :destroy]
   resources :episodes
@@ -15,6 +15,7 @@ Rails.application.routes.draw do
 
  post '/register', to: 'users#create' 
  get '/users_total', to: 'users#index'
+ get '/me', to: "users#show"
 
 
 
