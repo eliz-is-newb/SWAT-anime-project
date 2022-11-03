@@ -5,21 +5,24 @@ Rails.application.routes.draw do
   resources :comments, only: [:index, :create, :destroy]
   resources :episodes
   resources :animes
+  resources :users
   resources :favorites
   resources :genres
   resources :lr_animes
   resources :weekly_top_animes
 
-  # ʚ♥ɞ user's routes - handling authentication / authorization         
-  resources :users, only: [:create, :show]
-  resources :sessions, only: [:create, :destroy]
-  
+  # ʚ♥ɞ user's routes - handling authentication / authorization 
+
+ post '/register', to: 'users#create' 
+ get '/users_total', to: 'users#index'
+
+
 
   
 post 'authenticate', to: 'authentication#authenticate'
 
 
-  # ʚ♥ɞ anime                                                            
+  # ʚ♥ɞ anime 
   get '/anime_info', to: "animes#index"
     # this route was for all the anime data but idk now, it fucking hates me. 
 
@@ -31,7 +34,7 @@ post 'authenticate', to: 'authentication#authenticate'
   get '/see/new', to: "animes#show_recently_released_episodes"
 
  
-  # ʚ♥ɞ routes that fucking hate me                                       
+  # ʚ♥ɞ routes that fucking hate me 
 
 
  
