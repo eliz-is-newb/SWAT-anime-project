@@ -6,32 +6,31 @@ import { useNavigate } from "react-router-dom";
 function Login() {
 
   // fetch for user data & auth 
-//  const [username, setUsername] = useState("");
-//  const [password, setPassword] = useState(""): 
+ const [email, setEmail] = useState("");
+ const [password, setPassword] = useState(""): 
 //  const [errors, setErrors] = useState([]);
 //  const [isLoading, setIsLoading] = useState(false); 
 
-//     function handleFormUpdate(e) {
-// 		setFormData(oldFormData => {
-// 		return {...oldFormData, 
-// 		[e.target.name]: e.target.value} 
-// 		})
-// 	}
+    function handleFormUpdate(e) {
+		setFormData(oldFormData => {
+		return {...oldFormData, 
+		[e.target.name]: e.target.value} 
+		})
+	}
 	
 //     function handleSubmit(e) {
 // 		e.preventDefault();
-//     setIsLoading(true);
-//     fetch('http://localhost:3000/login', {
+//     fetch('http://localhost:3000/authenticate', {
 //       method: 'POST',
 //       headers: {
 //         'Content-Type': 'application/json',
 //       },
-//       body: JSON.stringify({ username, password }),
+//       body: JSON.stringify({ email, password }),
 //     })
-//       .then((response) => { setIsLoading(false); 
+//       .then((response) => 
 //         if (response.ok) {
 //           response.json().then((user) => onLogin(user));
-//         }
+//         
 //       });
 //     }
       
