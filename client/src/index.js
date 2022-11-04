@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import "bootstrap/dist/css/bootstrap.min.css";
+
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AnimeInfo from './components/Library/AnimeInfo';
@@ -8,6 +8,7 @@ import AnimeStreamPlayer from './components/Library/AnimeStreamPlayer';
 import Login from './components/Library/Login';
 import Register from './components/Library/Register';
 import UserLoggedInLanding from './views/UserLoggedInLanding';
+import AnimeDescription from './views/AnimeDescription';
 import './index.css';
 
 
@@ -17,6 +18,7 @@ import './index.css';
 import Landing from './views/Landing';
 import Library from './views/Library';
 import UserCoreBar from './components/UserCoreBar';
+import StreamBoard from './views/StreamBoard';
 /* Auth Pages */
 // import Login from './views/Login';
 // import Register from './views/Register';
@@ -33,8 +35,8 @@ root.render(
         {/* Landing Pages */}
         <Route path="/" element={<Landing />} />
         <Route path="/library" element={<Library />}/>
-        <Route path='/info/:id' element={<AnimeInfo />}/>
-        <Route path='/streamplayer/:id' element={<AnimeStreamPlayer />}/>
+        <Route path='/info/:id' element={<AnimeDescription />}/>
+        <Route path='/streamplayer/:id' element={<StreamBoard />}/>
         {/* Auth Pages */}
         <Route path="/login" element={<Login /> } />
         <Route path="/register" element={<Register />} /> 

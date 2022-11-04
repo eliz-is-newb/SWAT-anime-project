@@ -25,8 +25,8 @@ function AnimeStreamPlayer({videoData}){
     console.log("EPI",episodes)
     // console.log(videoData)
     return (
-        <>
-         <h1  className="text-5xl bg-white text-black font-bold mt-4 ml-56 mb-10 mx-10 px-10"> 
+        <div className="mb-10">
+         <h1  className="text-4xl bg-white text-black font-bold mt-10 ml-56 -mb-12 mx-10 px-10"> 
            Watching: {videoData1?.anime?.anime_title} </h1>
             {episodes.map((item)=>{
                 return (
@@ -44,12 +44,12 @@ function AnimeStreamPlayer({videoData}){
             </div> 
         
             <div className="-ml-72" style={{position:"relative",zIndex:"-0", marginTop:"605px", marginLeft:"160px"}}>
-            <a href="#item" className="text-2xl font-bold bg-lime-500 text-black"> &nbsp;Episode {item.ep_num}&nbsp; </a> 
+            <a href="#item" className="text-2xl  bg-lime-500 text-black"> &nbsp;Episode {item.ep_num}&nbsp; </a> 
             </div>
             </div>
  )})}
 
-        </>
+        </div>
     );
 }
 

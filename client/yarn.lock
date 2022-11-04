@@ -4055,10 +4055,10 @@
   "resolved" "https://registry.npmjs.org/csstype/-/csstype-3.1.1.tgz"
   "version" "3.1.1"
 
-"daisyui@^2.24.0", "daisyui@^2.33.0":
-  "integrity" "sha512-l43iibOsfYAYfRMIsCfobSk4ygV2/OiQMX98zLFrafWt5zoSed7I4b4tRlKeP6xhnfVe6Xkv/84nFfapHI0B2A=="
-  "resolved" "https://registry.npmjs.org/daisyui/-/daisyui-2.36.1.tgz"
-  "version" "2.36.1"
+"daisyui@^2.24.0", "daisyui@^2.38.0":
+  "integrity" "sha512-/AIT/XrNY8QLpXnoEXU7aFv5NRU7R3NSpg13ujs+hkTlDlR8pkjsGMqTRKvMf7orCX9833VLFAFJw+CH4EORvA=="
+  "resolved" "https://registry.npmjs.org/daisyui/-/daisyui-2.38.0.tgz"
+  "version" "2.38.0"
   dependencies:
     "color" "^4.2"
     "css-selector-tokenizer" "^0.8.0"

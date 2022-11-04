@@ -120,6 +120,7 @@ function Register() {
                   value={username}
                   onChange={onChangeUsername}
                   validations={[required, vusername]}
+                  placeholder="Enter username here"
                 />
               </div>
 
@@ -127,9 +128,10 @@ function Register() {
                 <label htmlFor="email">Email</label>
                 <Input
                   type="text"
-                  className="form-control"
+                  className="form-control bg-blue-100"
                   name="email"
                   value={email}
+                  placeholder="Enter email here"
                   onChange={onChangeEmail}
                   validations={[required, validEmail]}
                 />
@@ -144,6 +146,7 @@ function Register() {
                   value={password}
                   onChange={onChangePassword}
                   validations={[required, vpassword]}
+                  placeholder="Enter username here"
                 />
               </div>
 

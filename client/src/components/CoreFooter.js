@@ -2,7 +2,7 @@ import { Footer } from "react-daisyui";
 
 function LandingFooter(){
     return (
-        <Footer className="bg-black p-10 mt-10">
+        <Footer className="bg-black p-10 mt-16">
             <div>
                 <img src="/assets/img/logo.png" alt="logo" className="w-20 h-20 "/>
                 <p className="text-white">

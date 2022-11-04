@@ -1,4 +1,5 @@
 import { Navbar, Button, Menu, Link, Form, Input } from 'react-daisyui';
+import AuthService from '../services/auth.service';
 import { useNavigate } from "react-router-dom";
 
 
@@ -8,6 +9,10 @@ function UserCoreBar(){
 
 const navigate = useNavigate();
 
+
+const logOut = () => {
+    AuthService.logout();
+  };
 // function handleLogOut() {
 //     fetch('http://localhost/logout', {
 //         method: 'DELETE',
@@ -42,7 +47,7 @@ return (
                 </Navbar.Center>
                 <Navbar.End className='space-x-4 m-1 font-sans'>
                     <Button variant="outline" href="/dashboard">Dashboard</Button>  
-                     <Button color="primary" >Log out</Button>
+                     <Button color="primary" onClick={logOut} >Log out</Button>
                 </Navbar.End>
             </Navbar>
         </div>
