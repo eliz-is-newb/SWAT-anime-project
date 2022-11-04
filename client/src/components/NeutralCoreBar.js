@@ -1,6 +1,6 @@
 import { Navbar, Button, Menu, Link, Form, Input } from 'react-daisyui';
 
-function LandingBar(){
+function NeutralCoreBar(){
     return (
         <div className="flex w-full bg-black component-preview items-center justify-center font-sans">
             <Navbar className='text-neutral-content'>
@@ -13,17 +13,17 @@ function LandingBar(){
                     </Link>
                 </Navbar.Start>
                 <Navbar.Center>
-                    <Form>
+                    {/* <Form>
                         <Input className="w-96 h-10 mt-2 text-black " bordered type="text" placeholder="Search..." />
-                    </Form>
+                    </Form> */}
                 </Navbar.Center>
-                <Navbar.End className='space-x-4 m-1 mr-3 font-sans'>
-                    <Button variant="outline" className="text-white  hover:text-purple-600" href="login">Login</Button>
-                    <Button color="primary"className="bg-white hover:bg-lime-400   text-black" href="register">register</Button>
+                <Navbar.End className='space-x-4 m-1 font-sans'>
+                    {/* <Button variant="outline" className="text-white  hover:text-purple-600" href="/library">Library</Button> */}
+                    {/* <Button color="primary"className="bg-white hover:bg-lime-400   text-black" href="register">register</Button> */}
                 </Navbar.End>
             </Navbar>
         </div>
     );
 }
 
-export default LandingBar;
+export default NeutralCoreBar;

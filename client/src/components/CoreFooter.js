@@ -11,7 +11,7 @@ function LandingFooter(){
                     Providing reliable tech since 1998
                 </p>
             </div>
-            <div>
+            {/* <div>
                 <Footer.Title className="text-white">Getting Started</Footer.Title>
                 <a href="/dashboard" className="link  text-white link-hover">Dashboard</a>
                 <a href="/login" className="link text-white link-hover">Login</a>
@@ -22,7 +22,7 @@ function LandingFooter(){
                 <a href="#about" className="link text-white link-hover">About</a>
                 <a href="#our-mission" className="link text-white link-hover">Our Mission</a>
                 <a href="#contact" className="link text-white link-hover">Contact</a>
-            </div>
+            </div> */}
         </Footer>
     );
 }

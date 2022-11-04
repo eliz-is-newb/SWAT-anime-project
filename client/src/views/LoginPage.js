@@ -1,18 +1,18 @@
 import { useEffect, useState } from "react";
 import NeutralCoreBar from "../components/NeutralCoreBar";
 import CoreFooter from "../components/CoreFooter";
-import Map from "../components/Library/Map";
+import Login from "../components/Library/Login";
 
-function Library(){
+function LoginPage(){
 
 
     return (
         <>
             <NeutralCoreBar />
-            <Map />
+            <Login />
             <CoreFooter />
         </>
     );
 }
 
-export default Library;
+export default LoginPage;

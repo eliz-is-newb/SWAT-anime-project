@@ -1,18 +1,18 @@
 import { useEffect, useState } from "react";
 import NeutralCoreBar from "../components/NeutralCoreBar";
 import CoreFooter from "../components/CoreFooter";
-import Map from "../components/Library/Map";
+import Register from "../components/Library/Register";
 
-function Library(){
+function SignUpPage(){
 
 
     return (
         <>
             <NeutralCoreBar />
-            <Map />
+            <Register />
             <CoreFooter />
         </>
     );
 }
 
-export default Library;
+export default SignUpPage;

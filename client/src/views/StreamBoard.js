@@ -1,4 +1,4 @@
-import CoreBar from "../components/CoreBar";
+import LibraryCoreBar from "../components/LibraryCoreBar";
 import CoreFooter from "../components/CoreFooter";
 
 import AnimeStreamPlayer from "../components/Library/AnimeStreamPlayer";
@@ -7,7 +7,7 @@ import AnimeStreamPlayer from "../components/Library/AnimeStreamPlayer";
 function StreamBoard(){
     return (
         <>
-            <CoreBar />
+            <LibraryCoreBar />
             <AnimeStreamPlayer /> 
             <CoreFooter />
         </>

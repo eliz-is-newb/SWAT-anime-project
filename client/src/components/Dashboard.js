@@ -6,7 +6,20 @@ function Dashboard(){
     return (
         <div className="flex w-full component-preview items-center font-bold bg-white justify-center font-sans">
 
-          <h1 className="text-black font-sans">Hewwo!</h1>
+          <h1 className="text-black text-4xl mt-40  mr-6 font-sans"
+          style={{position: "absolute", top:"-5px", left:"485px", }}
+          >Hewwo! 
+          
+          <br/> No donde esta biblioteca!<br/> Please enjoy this certified hood classic :(( </h1>
+          <br/>
+          <iframe  className="mb-20 mt-56"
+          width="695" height="415" src="https://www.youtube.com/embed/EnzA6mHQrog" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
+
+           <Button variant="outline" className="text-black  hover:text-purple-600" 
+           style={{position:"absolute", top:"145px", left:"1030px"}}
+           href="/loggedin">Back to Home</Button>
+
+
 {/* 
            <div className="container">
       <header className="jumbotron">

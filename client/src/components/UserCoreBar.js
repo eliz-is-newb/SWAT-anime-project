@@ -41,13 +41,13 @@ return (
                     </Link>
                 </Navbar.Start>
                 <Navbar.Center>
-                    <Form>
+                    {/* <Form>
                         <Input className="w-96 text-black" bordered type="text" placeholder="Search..." />
-                    </Form>
+                    </Form> */}
                 </Navbar.Center>
-                <Navbar.End className='space-x-4 m-1 font-sans'>
+                <Navbar.End className='space-x-4 m-1 mr-3 font-sans'>
                     <Button variant="outline" href="/dashboard">Dashboard</Button>  
-                     <Button color="primary" onClick={logOut} >Log out</Button>
+                     <Button color="primary" onClick={logOut} href="/" >Log out</Button>
                 </Navbar.End>
             </Navbar>
         </div>

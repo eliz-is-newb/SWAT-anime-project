@@ -1,5 +1,6 @@
 
 import React, { useState, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
@@ -82,9 +83,9 @@ function Register() {
 
     if (checkBtn.current.context._errors.length === 0) {
       AuthService.register(username, email, password).then(
-        (response) => {
-          setMessage(response.data.message);
-          setSuccessful(true);
+        () => {
+          navigate("/loggedin"); 
+        window.location.reload();
         },
         (error) => {
           const resMessage =
@@ -100,22 +101,31 @@ function Register() {
       );
     }
   };
-
+    // functionality for user route to session#create
+    const navigate = useNavigate();
   
 
     return(
-      <div className="col-md-12">
-      <div className="card card-container">
+      <div className="bg-lime-600 -mb-48 h-screen">
+
+        <br/>
+        <br/>
+        <br/>
+      <div className="p-14 w-96 mx-auto bg-black shadow-lg flex items-center space-x-4">
+       
       
 
         <Form onSubmit={handleRegister} ref={form}>
           {!successful && (
             <div>
-              <div className="form-group">
-                <label htmlFor="username">Username</label>
+              <div className="form-group mb-4">
+              <h1 className="font-bold text-4xl mb-8 text-white">Sign Up</h1>
+                <label htmlFor="username" className="font-bold text-white">Username</label>
+                <br/>
                 <Input
+
                   type="text"
-                  className="form-control"
+                  className="form-control bg-slate-200 rounded h-10 px-10"
                   name="username"
                   value={username}
                   onChange={onChangeUsername}
@@ -124,11 +134,11 @@ function Register() {
                 />
               </div>
 
-              <div className="form-group">
-                <label htmlFor="email">Email</label>
+              <div className="form-group mb-4">
+                <label htmlFor="email" className="font-bold text-white" >Email</label>
                 <Input
                   type="text"
-                  className="form-control bg-blue-100"
+                  className="form-control bg-slate-200 rounded h-10 px-10"
                   name="email"
                   value={email}
                   placeholder="Enter email here"
@@ -138,10 +148,10 @@ function Register() {
               </div>
 
               <div className="form-group">
-                <label htmlFor="password">Password</label>
+                <label htmlFor="password" className="font-bold text-white" >Password</label>
                 <Input
                   type="password"
-                  className="form-control"
+                  className="form-control bg-slate-200 rounded h-10 px-10"
                   name="password"
                   value={password}
                   onChange={onChangePassword}
@@ -151,7 +161,7 @@ function Register() {
               </div>
 
               <div className="form-group">
-                <button className="btn btn-primary btn-block">Sign Up</button>
+                <button className="btn btn-primary btn-block mt-10">Create New Account</button>
               </div>
             </div>
           )}

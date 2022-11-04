@@ -1,4 +1,4 @@
-import CoreBar from "../components/CoreBar";
+import LibraryCoreBar from "../components/LibraryCoreBar";
 import CoreFooter from "../components/CoreFooter";
 
 import AnimeInfo from "../components/Library/AnimeInfo";
@@ -7,7 +7,7 @@ import AnimeInfo from "../components/Library/AnimeInfo";
 function AnimeDescription(){
     return (
         <>
-            <CoreBar />
+            <LibraryCoreBar />
             <AnimeInfo /> 
             <CoreFooter />
         </>
