@@ -13,9 +13,9 @@ function LandingBar(){
                     </Link>
                 </Navbar.Start>
                 <Navbar.Center>
-                    <Form>
+                    {/* <Form>
                         <Input className="w-96 h-10 mt-2 text-black " bordered type="text" placeholder="Search..." />
-                    </Form>
+                    </Form> */}
                 </Navbar.Center>
                 <Navbar.End className='space-x-4 m-1 mr-3 font-sans'>
                     <Button variant="outline" className="text-white  hover:text-purple-600" href="login">Login</Button>
