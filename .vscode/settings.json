@@ -64,7 +64,7 @@
     "doki.background.path": "/Users/user/Desktop/the lobby/desktop workspace mode/desktop wallpapers/Untitled.png",
     "doki.background.anchor": "right",
     "doki.wallpaper.path": "",
-    "doki.sticker.css": "z-index:100;background-position:99% 105%; opacity:.0; ",
+    "doki.sticker.css": "z-index:100;background-position:99% 105%; opacity:0.2; ",
     "doki.sticker.path": "",
     "doki.statusbar.name": "Kitty ",
     "zenMode.centerLayout": false,
